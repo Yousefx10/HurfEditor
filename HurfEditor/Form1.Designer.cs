@@ -40,7 +40,7 @@
             WebView.Dock = DockStyle.Fill;
             WebView.Location = new Point(0, 0);
             WebView.Name = "WebView";
-            WebView.Size = new Size(800, 450);
+            WebView.Size = new Size(1030, 623);
             WebView.TabIndex = 0;
             WebView.ZoomFactor = 1D;
             // 
@@ -48,10 +48,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1030, 623);
             Controls.Add(WebView);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Hurf Editor : V0.1.0";
             ((System.ComponentModel.ISupportInitialize)WebView).EndInit();
             ResumeLayout(false);
         }
