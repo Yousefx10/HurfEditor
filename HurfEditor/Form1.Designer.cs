@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            WebView = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)WebView).BeginInit();
+            SuspendLayout();
+            // 
+            // WebView
+            // 
+            WebView.AllowExternalDrop = true;
+            WebView.CreationProperties = null;
+            WebView.DefaultBackgroundColor = Color.White;
+            WebView.Dock = DockStyle.Fill;
+            WebView.Location = new Point(0, 0);
+            WebView.Name = "WebView";
+            WebView.Size = new Size(800, 450);
+            WebView.TabIndex = 0;
+            WebView.ZoomFactor = 1D;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(WebView);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)WebView).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Microsoft.Web.WebView2.WinForms.WebView2 WebView;
     }
 }
