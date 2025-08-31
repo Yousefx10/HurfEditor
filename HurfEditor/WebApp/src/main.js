@@ -11,6 +11,7 @@ import { css } from "@codemirror/lang-css";
 //More imports:
 import { colorPicker, wrapperClassName } from "@replit/codemirror-css-color-picker";
 import { indentationMarkers } from "@replit/codemirror-indentation-markers";
+import { showMinimap } from "@replit/codemirror-minimap";
 
 
 //Unused imports, FOR NOW:
@@ -30,6 +31,11 @@ document.head.appendChild(style);
 
 
 
+
+const create = (v) => {
+  const dom = document.createElement("div");
+  return { dom };
+};
 
 
 
@@ -67,7 +73,15 @@ const state = EditorState.create({
         activeLight: 'LightGreen',
         activeDark: 'DarkGreen',
       }
-    })
+    }),
+    showMinimap.compute(['doc'], (state) => ({
+      create,
+      displayText: 'blocks',
+      showOverlay: 'mouse-over',
+      //gutters: [ { 1: '#00FF00', 2: 'green', 30: 'rgb(0, 100, 50)' } ]
+    }))
+
+
 
   ]
 });
