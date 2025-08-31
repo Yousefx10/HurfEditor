@@ -19,6 +19,7 @@
     "@replit/codemirror-css-color-picker": "^6.3.0",
     "@replit/codemirror-indentation-markers": "^6.5.3",
     "@replit/codemirror-minimap": "^0.5.2",
+    "@uiw/codemirror-extensions-zebra-stripes": "^4.25.1",
     "codemirror": "^6.0.2"
   },
   "devDependencies": {

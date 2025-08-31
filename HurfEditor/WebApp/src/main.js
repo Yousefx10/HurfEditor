@@ -12,6 +12,7 @@ import { css } from "@codemirror/lang-css";
 import { colorPicker, wrapperClassName } from "@replit/codemirror-css-color-picker";
 import { indentationMarkers } from "@replit/codemirror-indentation-markers";
 import { showMinimap } from "@replit/codemirror-minimap";
+import { zebraStripes } from '@uiw/codemirror-extensions-zebra-stripes';
 
 
 //Unused imports, FOR NOW:
@@ -79,7 +80,13 @@ const state = EditorState.create({
       displayText: 'blocks',
       showOverlay: 'mouse-over',
       //gutters: [ { 1: '#00FF00', 2: 'green', 30: 'rgb(0, 100, 50)' } ]
-    }))
+    })),
+    zebraStripes({
+      lineNumber: true,  // whether stripes consider line numbers
+          lightColor: '#aca2ff33',
+          darkColor: '#aca2ff40',
+    }),
+
 
 
 
