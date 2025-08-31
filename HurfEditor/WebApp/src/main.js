@@ -10,6 +10,8 @@ import { css } from "@codemirror/lang-css";
 
 //More imports:
 import { colorPicker, wrapperClassName } from "@replit/codemirror-css-color-picker";
+import { indentationMarkers } from "@replit/codemirror-indentation-markers";
+
 
 //Unused imports, FOR NOW:
 //import { keymap } from "@codemirror/view";
@@ -49,7 +51,25 @@ const state = EditorState.create({
   </body>
   </html>
   `,
-  extensions: [basicSetup, html(),css(),javascript(), colorPicker]
+  extensions: [
+    basicSetup,
+    html(),css(),javascript(),
+    colorPicker,
+    indentationMarkers({
+      highlightActiveBlock: true,
+      activeThickness:5,
+      hideFirstIndent: false,
+      markerType: "fullScope",
+      thickness: 3,
+      colors: {
+        light: 'lightblue',
+        dark: 'DarkBlue',
+        activeLight: 'LightGreen',
+        activeDark: 'DarkGreen',
+      }
+    })
+
+  ]
 });
 
 const view = new EditorView({
