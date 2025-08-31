@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@codemirror/lang-css": "^6.3.1",
+    "@codemirror/lang-html": "^6.4.9",
     "@codemirror/lang-javascript": "^6.2.4",
+    "@replit/codemirror-css-color-picker": "^6.3.0",
     "codemirror": "^6.0.2"
   },
   "devDependencies": {
