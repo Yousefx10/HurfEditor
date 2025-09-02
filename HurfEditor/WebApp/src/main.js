@@ -14,6 +14,8 @@ import { indentationMarkers } from "@replit/codemirror-indentation-markers";
 import { showMinimap } from "@replit/codemirror-minimap";
 import { zebraStripes } from '@uiw/codemirror-extensions-zebra-stripes';
 
+//My Own Packages:
+import { contextMenuExtension } from "@esbitan/codemirror-context-menu";
 
 //Unused imports, FOR NOW:
 //import { keymap } from "@codemirror/view";
@@ -86,6 +88,7 @@ const state = EditorState.create({
           lightColor: '#aca2ff33',
           darkColor: '#aca2ff40',
     }),
+    contextMenuExtension({})
 
 
 
