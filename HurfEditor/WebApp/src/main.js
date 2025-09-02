@@ -63,6 +63,13 @@ const state = EditorState.create({
   extensions: [
     basicSetup,
     html(),css(),javascript(),
+    
+    EditorView.theme({
+      ".cm-gutter.cm-lineNumbers": {
+        minWidth: "4ch"// always wide enough for 4 digits (0000–9999)
+      }
+    }),
+
     colorPicker,
     indentationMarkers({
       highlightActiveBlock: true,
