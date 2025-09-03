@@ -95,7 +95,9 @@ const state = EditorState.create({
           lightColor: '#aca2ff33',
           darkColor: '#aca2ff40',
     }),
-    contextMenuExtension({})
+    contextMenuExtension({
+      enableUndoRedo: false,
+    })
 
 
 
